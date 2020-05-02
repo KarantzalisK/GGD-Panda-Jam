@@ -835,6 +835,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9494efd576f4e93469bbfbd476d1905b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyObj: {fileID: 917009279}
+  wavecount: 1
+  setEnemiesPerWave: 1400000000000000
   enemyPaths:
   - waypoints:
     - {fileID: 416948501}
@@ -848,6 +851,7 @@ MonoBehaviour:
     - {fileID: 1236703706}
     - {fileID: 1943161518}
     - {fileID: 718871658}
+  enemieslist: []
 --- !u!4 &1078721178
 Transform:
   m_ObjectHideFlags: 0
