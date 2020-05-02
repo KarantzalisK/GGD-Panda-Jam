@@ -2,9 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyPathFinding : MonoBehaviour
+
+[System.Serializable]
+public class waypointList 
 {
-    public int damage;
+    public List<GameObject> waypoints;
+}
+
+public class SpawnManager : MonoBehaviour
+{
+    [SerializeField]
+    public List<waypointList> enemyPaths;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,4 +25,6 @@ public class enemyPathFinding : MonoBehaviour
     {
         
     }
+
+
 }
