@@ -2,65 +2,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-[System.Serializable]
-public class waypointList 
-{
-    public List<GameObject> waypoints;
-}
-[System.Serializable]
-public class enemiesWaveList
-{
-    public List<GameObject> enemiesWaveArranger;
-}
-
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject enemyObj;
-    public int wavecount = 1,maxEnemies;
-    public int[] setEnemiesPerWave;
-    private bool canInstansiate = true;
     [SerializeField]
-    public List<waypointList> enemyPaths;
-    [SerializeField]
-    public List<enemiesWaveList>  enemieslist;
+    public List<EnemyPaths> enemyPaths;
 
-    // Start is called before the first frame update
+    [SerializeField]
+    public List<Wave> Waves;
+
+    public float timeCounter;
+
     void Start()
     {
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-           if (wavecount == 1)
-        {
-            wavecount = 1;
-            enemyInstancing();
-
-        }
-        }
-        void enemyInstancing()
-        {
-            if ( canInstansiate)
-        {
-           
-                for (int i = 0; i <= setEnemiesPerWave[wavecount-1]; i++)
-                {  
-                   Instantiate(enemyObj,(enemyPaths[0].waypoints[0].transform));
-                
-                    Debug.Log(i + "yparxv");
-                    if (i >= setEnemiesPerWave[wavecount])
-                    {
-                        canInstansiate = false;
-                    }
-
-
-                }
-
-            }
-        }
 
     }
+
+    void Update()
+    {
+        timeCounter += Time.deltaTime;
+    }
+
+    private bool subWaveInstanciation(SubWave subWave)
+    {
+        if (timeCounter >= subWave.whenToSpawn && !subWave.isInstanciated)
+        {
+            subWave.isInstanciated = true;
+            StartCoroutine(instanciateEnemies(subWave.enemy, subWave.amountOfEnemies, subWave.instanciateDelay));
+            return true;
+
+        }
+    }
+
+    private IEnumerator instanciateEnemies(GameObject enemy, int amountOfEnemies, float instanciateDelay)
+    {
+
+        for (int i = 0; i < amountOfEnemies; i++)
+        {
+            yield return new WaitForSeconds(instanciateDelay);
+        }
+    }
+
+    private IEnumerator checkIfSubWavesAreReady() { 
+        
+        
+    }
+
+}
 
