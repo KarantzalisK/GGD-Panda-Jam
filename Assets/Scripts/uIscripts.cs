@@ -6,12 +6,16 @@ using UnityEngine.SceneManagement;
 public class uIscripts : MonoBehaviour
 {
     public string sceneName;
-    public GameObject pauseMenu, controllPanelBeforeStart;
-    private GameObject wallHealth;
+    public GameObject pauseMenu, controllPanelBeforeStart,deadPanel;
+    private int wallhealthInt,maxwallhealthINT;
+    private GameObject wallHealthOBJ;
 
     // Start is called before the first frame update
     void Start()
     {
+        wallHealthOBJ = GameObject.FindGameObjectWithTag("wall");
+        wallhealthInt = wallHealthOBJ.GetComponent<WallScript>().wallHealth;
+        maxwallhealthINT = wallHealthOBJ.GetComponent<WallScript>().maxWallHealth;
     }
 
     // Update is called once per frame
@@ -30,6 +34,10 @@ public class uIscripts : MonoBehaviour
         else if (pauseMenu.activeSelf==false) {
             Time.timeScale = 1;
 
+        }
+        if (wallhealthInt == maxwallhealthINT)
+        {
+            deadPanel.SetActive(true);   
         }
     }
     public void LoadingScenes(string sceneName)

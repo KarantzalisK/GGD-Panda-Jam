@@ -22,7 +22,7 @@ public class WallScript : MonoBehaviour
         {
             darkenSpriterSlider.enabled = true;
         }
-
+      
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

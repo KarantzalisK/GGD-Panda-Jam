@@ -6,6 +6,7 @@ TagManager:
   tags:
   - bamboo
   - enemy
+  - turret
   layers:
   - Default
   - TransparentFX
