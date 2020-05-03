@@ -656,6 +656,7 @@ GameObject:
   - component: {fileID: 917009280}
   - component: {fileID: 917009283}
   - component: {fileID: 917009282}
+  - component: {fileID: 917009284}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -774,6 +775,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &917009284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917009279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d7a3e422a92de42a63f950e4504d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!1 &978833058
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,26 +898,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9494efd576f4e93469bbfbd476d1905b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyObj: {fileID: 917009279}
-  wavecount: 1
-  maxEnemies: 0
-  setEnemiesPerWave: 1400000014000000
   enemyPaths:
-  - waypoints:
-    - {fileID: 416948501}
-    - {fileID: 2140083379}
-    - {fileID: 305690220}
-    - {fileID: 863370726}
-    - {fileID: 1736031571}
-  - waypoints:
-    - {fileID: 306010675}
-    - {fileID: 891553299}
-    - {fileID: 1236703706}
-    - {fileID: 1943161518}
-    - {fileID: 718871658}
-  enemieslist:
-  - enemiesWaveArranger: []
-  - enemiesWaveArranger: []
+  - {fileID: 0}
+  - {fileID: 0}
+  Waves: []
+  timeCounter: 0
 --- !u!4 &1078721178
 Transform:
   m_ObjectHideFlags: 0
