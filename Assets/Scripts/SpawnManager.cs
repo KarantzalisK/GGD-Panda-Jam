@@ -31,6 +31,7 @@ public class SpawnManager : MonoBehaviour
             return true;
 
         }
+        else return false;
     }
 
     private IEnumerator instanciateEnemies(GameObject enemy, int amountOfEnemies, float instanciateDelay)
@@ -42,10 +43,9 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    private IEnumerator checkIfSubWavesAreReady() { 
-        
-        
-    }
+    //private IEnumerator checkIfSubWavesAreReady() {
+
+    //}
 
 }
 
