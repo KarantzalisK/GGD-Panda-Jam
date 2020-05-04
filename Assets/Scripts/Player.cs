@@ -12,15 +12,21 @@ public class Player : MonoBehaviour
     public Transform turretTransf, newTurretPosition;
     private Animator animatorComponent;
     private SpriteRenderer srOFobj;
+    private GameObject turret;
+    public float throwingSpeed;
+    private Rigidbody2D turretRb;
+    public Vector2 onMouseclick;
     public bool canCarry = false, carrying = false;
 
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
         rb = GetComponent<Rigidbody2D>();
         srOFobj = gameObject.GetComponent<SpriteRenderer>();
         animatorComponent = gameObject.GetComponent<Animator>();
+        turret = GameObject.FindGameObjectWithTag("turret");
+        turretRb = turret.GetComponent<Rigidbody2D>();
 
     }
 
@@ -31,13 +37,14 @@ public class Player : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
         AnimationControl();
         PickUpTurret();
-
     }
 
 
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        ShootinTurrets();
+
 
     }
     private void PickUpTurret()
@@ -49,7 +56,7 @@ public class Player : MonoBehaviour
 
 
         }
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.E) || Input.GetKey(KeyCode.Mouse0))
         {
             carrying = false;
             holdingObject = false;
@@ -113,11 +120,16 @@ public class Player : MonoBehaviour
         {
             animatorComponent.SetBool("WalkingHorizontal", false);
         }
-        if (carrying)
-        {
+           
 
-        }
 
+
+    }
+    private void ShootinTurrets()
+    {   if (Input.GetKey(KeyCode.Mouse0) && holdingObject)
+        onMouseclick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        turretRb.MovePosition(turretRb.position + onMouseclick * throwingSpeed*Time.fixedDeltaTime);
+        Debug.Log("eisai edw");
 
 
     }
