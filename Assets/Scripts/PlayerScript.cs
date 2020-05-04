@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerScript : MonoBehaviour
 {
 
     Rigidbody2D rb;
@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     public float throwingSpeed;
     private Rigidbody2D turretRb;
     public Vector2 onMouseclick;
-    public bool canCarry = false, carrying = false;
+    public bool canCarry = false, carrying = false,canShoot=false;
 
 
     // Start is called before the first frame update
@@ -25,9 +25,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         srOFobj = gameObject.GetComponent<SpriteRenderer>();
         animatorComponent = gameObject.GetComponent<Animator>();
-        turret = GameObject.FindGameObjectWithTag("turret");
-        turretRb = turret.GetComponent<Rigidbody2D>();
-
+      
     }
 
     // Update is called once per frame
@@ -37,6 +35,7 @@ public class Player : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
         AnimationControl();
         PickUpTurret();
+        FindInstantiatedTurret();
     }
 
 
@@ -47,16 +46,24 @@ public class Player : MonoBehaviour
 
 
     }
+    private void FindInstantiatedTurret()
+    {   
+        turret = GameObject.FindGameObjectWithTag("turret");
+        if (turret.activeSelf==true){
+            turretRb = turret.GetComponent<Rigidbody2D>();
+            turretTransf = turret.transform;
+        }
+    }
     private void PickUpTurret()
     {
-        if (Input.GetKeyDown(KeyCode.E) && canCarry)
+        if (Input.GetKeyDown(KeyCode.LeftControl) && canCarry)
         {
             carrying = true;
             holdingObject = true;
 
 
         }
-        if (Input.GetKeyUp(KeyCode.E) || Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKey(KeyCode.Mouse0))
         {
             carrying = false;
             holdingObject = false;
@@ -127,8 +134,15 @@ public class Player : MonoBehaviour
     }
     private void ShootinTurrets()
     {   if (Input.GetKey(KeyCode.Mouse0) && holdingObject)
-        onMouseclick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        turretRb.MovePosition(turretRb.position + onMouseclick * throwingSpeed*Time.fixedDeltaTime);
+        {
+            onMouseclick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            canShoot = true;
+            
+        }
+    if (canShoot)
+        {
+            turretRb.MovePosition(turretRb.position + onMouseclick * throwingSpeed * Time.fixedDeltaTime);
+        }
         Debug.Log("eisai edw");
 
 
