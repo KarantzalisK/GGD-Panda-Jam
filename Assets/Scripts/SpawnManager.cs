@@ -39,6 +39,7 @@ public class SpawnManager : MonoBehaviour
 
         for (int i = 0; i < amountOfEnemies; i++)
         {
+            
             yield return new WaitForSeconds(instanciateDelay);
         }
     }

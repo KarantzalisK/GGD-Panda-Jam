@@ -5,11 +5,19 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int damage;
+    public int pathIndex,waypointIndex;
     public float health,maxhealth;
     public float healthPercentage,healthspriteXWIDTH;
+    public float speed;
+    public EnemyPaths enemypath;
     // Start is called before the first frame update
     void Start()
     {
+        waypointIndex = 0;
+        pathIndex = Random.Range(0,1);
+        enemypath= GameObject.FindGameObjectWithTag("spawnpoint").GetComponent<EnemyPaths>();
+
+        transform.position = enemypath.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position;
     }
 
     // Update is called once per frame
@@ -17,9 +25,10 @@ public class Enemy : MonoBehaviour
     {
      if (health >= maxhealth)
         {
-            gameObject.SetActive(false);
+            Destroy(this.gameObject);
         }
         EnemyHealthBarMANAGER();
+        enemyMovement();
     }
 
     
@@ -28,6 +37,17 @@ public class Enemy : MonoBehaviour
         healthPercentage = healthspriteXWIDTH - (health/maxhealth)*healthspriteXWIDTH;
         Debug.Log(healthPercentage + "healthpercentageEnemy");
         
+    }
+    public void enemyMovement()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, enemypath.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position,Time.deltaTime*speed);
+        if (transform.position == enemypath.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position)
+        {
+            waypointIndex++;
+        }
+        if (waypointIndex>= enemypath.enemyPaths[pathIndex].waypoints.Count) {
+            Destroy(this.gameObject);
+        }
     }
 
    
