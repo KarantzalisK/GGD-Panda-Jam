@@ -8,6 +8,8 @@ TagManager:
   - enemy
   - turret
   - wall
+  - spawnpoint
+  - externalBorder
   layers:
   - Default
   - TransparentFX

@@ -33,5 +33,6 @@ public class WallScript : MonoBehaviour
             healthslider.value = wallHealth;
             Debug.Log(healthslider.maxValue);
         }
+       
     }
 }
