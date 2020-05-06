@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class bambooCollectorScript : MonoBehaviour
 {
     public GameObject bambooTextobj;
-    public int bambooscore=0,bambootoupgrade=70;
+    public int bambooscore=0,bambootoupgrade=0;
+    public Transform objectATMaxEdge;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class bambooCollectorScript : MonoBehaviour
         {
             bambooscore++;
             bambooTextobj.GetComponent<TMPro.TextMeshProUGUI>().text = bambooscore.ToString() +  "/" + bambootoupgrade.ToString();
-            collision.gameObject.SetActive(false);
+            collision.gameObject.transform.position =new Vector2(Random.Range(-objectATMaxEdge.position.x, objectATMaxEdge.position.x),Random.Range(-objectATMaxEdge.position.y, objectATMaxEdge.position.y));
         }
         Debug.Log("KOLAI");
     }

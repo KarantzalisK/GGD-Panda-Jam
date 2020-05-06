@@ -9,7 +9,8 @@ public class PlayerScript : MonoBehaviour
     Vector2 movement;
     public float speed;
     public bool holdingObject = false;
-    public Transform turretTransf, newTurretPosition;
+    public Transform  newTurretPosition;
+    private Transform turretTransf;
     private Animator animatorComponent;
     private SpriteRenderer srOFobj;
     private GameObject turret;
@@ -99,13 +100,13 @@ public class PlayerScript : MonoBehaviour
         if (movement.y > 0)
         {
             animatorComponent.SetBool("WalkingVertical", true);
-            srOFobj.flipY = true;
+            //srOFobj.flipY = true;
 
         }
         else if (movement.y < 0)
         {
             animatorComponent.SetBool("WalkingVertical", true);
-            srOFobj.flipY = false;
+            //srOFobj.flipY = false;
         }
         else
         {
