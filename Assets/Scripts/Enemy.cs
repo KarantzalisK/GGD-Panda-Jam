@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
      if (health >= maxhealth)
         {
             Destroy(this.gameObject);
+
         }
         EnemyHealthBarMANAGER();
         enemyMovement();

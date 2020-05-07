@@ -15,9 +15,10 @@ public class SpawnManager : MonoBehaviour
     public List<Wave> Waves;
 
     public float timeCounter, instanciateDelay, waveDelay;
-    public bool canSpawn = true;
-    public int i = 0, amountOfEnemies, enemyIndexer, waveNumber = 1, extraEnemies;
+    public bool canSpawn = true,noEnemiesinList=false;
+    public int i = 0, amountOfEnemies=10, enemyIndexer, waveNumber = 1, extraEnemies;
     public GameObject[] enemyPrefabs;
+    //public List<GameObject> currentEnemies;
 
 
     void Start()
@@ -26,8 +27,9 @@ public class SpawnManager : MonoBehaviour
     }
 
     void Update()
-    {
-        timeCounter += Time.deltaTime;
+    {   
+            timeCounter += Time.deltaTime;
+        
         enemyInstantiate();
 
         //private bool subWaveInstanciation(SubWave subWave)
@@ -69,8 +71,8 @@ public class SpawnManager : MonoBehaviour
                 if (timeCounter >= instanciateDelay/waveNumber)
                 {   
                     enemyIndexer = UnityEngine.Random.Range(0, enemyPrefabs.Length);
+                    //currentEnemies.Add();
                     Instantiate(enemyPrefabs[enemyIndexer], gameObject.transform.position, Quaternion.identity);
-
                     timeCounter = 0;
                     i++;
 
@@ -83,19 +85,21 @@ public class SpawnManager : MonoBehaviour
             {
                 canSpawn = false;
 
-                if (timeCounter >= waveDelay)
-                {
-                    i = 0;
-                    waveNumber++;
-                    amountOfEnemies =amountOfEnemies+extraEnemies;
-                    canSpawn = true;
-                
-                }
-
-
-
+            if (GameObject.FindGameObjectsWithTag("enemy")==null )
+            {
+                timeCounter = 0;
+            }
+          
+            if (timeCounter >= waveDelay)
+            {
+                i = 0;
+                waveNumber++;
+                amountOfEnemies = amountOfEnemies + extraEnemies;
+                canSpawn = true;
 
             }
+
+        }
         }
     }
 
