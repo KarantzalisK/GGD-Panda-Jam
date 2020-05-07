@@ -8,13 +8,16 @@ public class uIscripts : MonoBehaviour
     public string sceneName;
     public GameObject pauseMenu, controllPanelBeforeStart,deadPanel,mainMenu;
     private int wallhealthInt,maxwallhealthINT;
-    private GameObject wallHealthOBJ;
+    private GameObject wallHealthOBJ,waveIndexObj;
+    public GameObject waveIndexTXTobj;
+
 
     // Start is called before the first frame update
     void Start()
     {
         wallHealthOBJ = GameObject.FindGameObjectWithTag("wall");
         maxwallhealthINT = wallHealthOBJ.GetComponent<WallScript>().maxWallHealth;
+        waveIndexObj = GameObject.FindGameObjectWithTag("spawnpoint");
     }
 
     // Update is called once per frame
@@ -44,6 +47,7 @@ public class uIscripts : MonoBehaviour
             Time.timeScale = 0;
 
         }
+        WaveIndicateVoid();
     }
     public void LoadingScenes(string sceneName)
     {
@@ -57,6 +61,10 @@ public class uIscripts : MonoBehaviour
     public void SceneQuiting()
     {
         Application.Quit();
+    }
+    public void WaveIndicateVoid()
+    {
+        waveIndexTXTobj.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave " + waveIndexObj.GetComponent<SpawnManager>().waveNumber.ToString();
     }
     
 
