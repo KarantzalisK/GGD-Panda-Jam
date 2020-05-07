@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         waypointIndex = 0;
-        pathIndex = Random.Range(0,1);
+        pathIndex = Random.Range(0,2);
         enemypath= GameObject.FindGameObjectWithTag("spawnpoint").GetComponent<EnemyPaths>();
 
         transform.position = enemypath.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position;
@@ -40,8 +40,8 @@ public class Enemy : MonoBehaviour
     }
     public void enemyMovement()
     {
-        transform.position = Vector3.MoveTowards(transform.position, enemypath.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position,Time.deltaTime*speed);
-        if (transform.position == enemypath.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position)
+        this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, enemypath.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position,Time.deltaTime*speed);
+        if (this.gameObject.transform.position == enemypath.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position)
         {
             waypointIndex++;
         }
@@ -49,6 +49,13 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("turretbolt"))
+        {
+            health=health+collision.gameObject.GetComponentInParent<towerScript>().towerDMG/3;
+        }
+    }
 
-   
+
 }

@@ -929,10 +929,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPaths:
-  - {fileID: 0}
-  - {fileID: 0}
-  Waves: []
-  timeCounter: 0
+  - {fileID: 1078721179}
+  - {fileID: 1078721179}
+  Waves:
+  - {fileID: 11400000, guid: 6821b3e5527a48843a526d4f420ce7bf, type: 2}
+  timeCounter: 1
 --- !u!4 &1078721178
 Transform:
   m_ObjectHideFlags: 0

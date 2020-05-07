@@ -12,20 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7932582ffc97b444a8a7aabb95b5ef5f, type: 3}
   m_Name: Wave1
   m_EditorClassIdentifier: 
-  loopSpawning: 0
+  loopSpawning: 1
   subWaves:
-  - enemy: {fileID: 0}
-    amountOfEnemies: 0
-    whenToSpawn: 0
-    instanciateDelay: 0
+  - enemy: {fileID: 3333294069174833615, guid: a059990ffa9a51045a081bf4e11d982f, type: 3}
+    amountOfEnemies: 19
+    whenToSpawn: 2
+    instanciateDelay: 1
     isInstanciated: 0
-  - enemy: {fileID: 0}
-    amountOfEnemies: 0
-    whenToSpawn: 0
-    instanciateDelay: 0
-    isInstanciated: 0
-  - enemy: {fileID: 0}
-    amountOfEnemies: 0
-    whenToSpawn: 0
-    instanciateDelay: 0
+  - enemy: {fileID: 2367796983183745888, guid: ec130c299bee3134da50960b82212002, type: 3}
+    amountOfEnemies: 30
+    whenToSpawn: 4
+    instanciateDelay: 1
     isInstanciated: 0

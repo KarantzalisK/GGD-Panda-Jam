@@ -20,6 +20,7 @@ public class SpawnManager : MonoBehaviour
     void Update()
     {
         timeCounter += Time.deltaTime;
+        
     }
 
     private bool subWaveInstanciation(SubWave subWave)
@@ -37,10 +38,11 @@ public class SpawnManager : MonoBehaviour
     private IEnumerator instanciateEnemies(GameObject enemy, int amountOfEnemies, float instanciateDelay)
     {
 
-        for (int i = 0; i < amountOfEnemies; i++)
+        for (int i = 0; i < amountOfEnemies;)
         {
-            
+            Instantiate(GameObject.FindGameObjectWithTag("enemy"), GameObject.FindGameObjectWithTag("enemy").transform.position, Quaternion.identity);
             yield return new WaitForSeconds(instanciateDelay);
+            i++;
         }
     }
 
