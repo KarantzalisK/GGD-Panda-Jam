@@ -14,13 +14,13 @@ public class uIscripts : MonoBehaviour
     void Start()
     {
         wallHealthOBJ = GameObject.FindGameObjectWithTag("wall");
-        wallhealthInt = wallHealthOBJ.GetComponent<WallScript>().wallHealth;
         maxwallhealthINT = wallHealthOBJ.GetComponent<WallScript>().maxWallHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
+        wallhealthInt = wallHealthOBJ.GetComponent<WallScript>().wallHealth;
         if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1 )
         {
             pauseMenu.SetActive(true);
@@ -35,9 +35,14 @@ public class uIscripts : MonoBehaviour
             Time.timeScale = 1;
 
         }
-        if (wallhealthInt == maxwallhealthINT)
+        if (wallhealthInt >= maxwallhealthINT)
         {
             deadPanel.SetActive(true);   
+        }
+        if (deadPanel.activeSelf)
+        {
+            Time.timeScale = 0;
+
         }
     }
     public void LoadingScenes(string sceneName)
