@@ -11,9 +11,11 @@ public class towerScript : MonoBehaviour
     public Vector3 firringDistanceOffset;
     private bool startCoroutine;
     public GameObject[] enemyArrays;
-    public float reloadDelay,shootinSpeed;
+    public float reloadDelay,shootinSpeed,radius;
     private bool canShootBolts=false;
-    private int enemyindex;
+    public int enemyindex;
+    public Vector2 towerEnemyDistance;
+    public Collider2D enemyColiders;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,13 +31,14 @@ public class towerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        findEnemyDistanceNshoot();
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("enemy"))
         {
             collision.gameObject.GetComponent<Enemy>().health = collision.gameObject.GetComponent<Enemy>().health + towerDMG;
-            findEnemyDistanceNshoot();
 
 
         }
@@ -47,13 +50,29 @@ public class towerScript : MonoBehaviour
     }
     private void findEnemyDistanceNshoot()
     {
-        {   if (firringDistanceOffset.x <= (this.gameObject.transform.position.x - enemyArrays[enemyindex].transform.position.x) & firringDistanceOffset.y <= (this.gameObject.transform.position.y - enemyArrays[enemyindex].transform.position.y)){
+        //towerEnemyDistance = this.gameObject.transform.position-enemyArrays[enemyindex].transform.position;
+        //{    if (enemyArrays[enemyindex] == null )
+        //    {
+        //        enemyindex++;
+        //    }
+        //    else if (firringDistanceOffset.x <= (Mathf.Abs(towerEnemyDistance.x)) && firringDistanceOffset.y <= Mathf.Abs(towerEnemyDistance.y))
+        //    {
 
-                StartCoroutine(shootDelay(enemyArrays[enemyindex]));
-            }
+        //        StartCoroutine(shootDelay(enemyArrays[enemyindex]));
+        //    }
+
+        //}
+        //if (enemyindex>=enemyArrays.Length)
+        //{
+        //    enemyindex = 0;
+
+        //}
+        enemyColiders= Physics2D.OverlapCircle(gameObject.transform.position, radius);
+         if (enemyColiders.CompareTag("enemy"))
+        {
+            GameObject.FindGameObjectWithTag("turretbolt").transform.position = Vector2.MoveTowards(GameObject.FindGameObjectWithTag("turretbolt").transform.position, enemyColiders.gameObject.transform.position, shootinSpeed * Time.deltaTime);
 
         }
-
     }
     private IEnumerator destroyDelay()
     {

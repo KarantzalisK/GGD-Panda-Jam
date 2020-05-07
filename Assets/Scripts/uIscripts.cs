@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class uIscripts : MonoBehaviour
 {
     public string sceneName;
-    public GameObject pauseMenu, controllPanelBeforeStart,deadPanel;
+    public GameObject pauseMenu, controllPanelBeforeStart,deadPanel,mainMenu;
     private int wallhealthInt,maxwallhealthINT;
     private GameObject wallHealthOBJ;
 
@@ -26,12 +26,12 @@ public class uIscripts : MonoBehaviour
             pauseMenu.SetActive(true);
 
         }
-        if (pauseMenu.activeSelf )
+        if (pauseMenu.activeSelf || mainMenu.activeSelf)
         {
             Time.timeScale = 0;
 
         }
-        else if (pauseMenu.activeSelf==false) {
+        else if (pauseMenu.activeSelf== false || mainMenu.activeSelf) {
             Time.timeScale = 1;
 
         }

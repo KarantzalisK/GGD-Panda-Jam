@@ -143,10 +143,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  pathIndex: 0
+  waypointIndex: 0
   health: 0
   maxhealth: 100
   healthPercentage: 0
   healthspriteXWIDTH: 0
+  speed: 3
+  enemypath: {fileID: 0}
 --- !u!1 &2367796983501555634
 GameObject:
   m_ObjectHideFlags: 0
