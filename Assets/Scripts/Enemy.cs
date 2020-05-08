@@ -7,8 +7,9 @@ public class Enemy : MonoBehaviour
     public int damage;
     public int pathIndex,waypointIndex;
     public float health,maxhealth;
-    public float healthPercentage,healthspriteXWIDTH;
+    public float healthPercentage,healthspriteXWIDTH, initialhealthspriteXWIDTH, initialhealthPercentage,initialhealth;
     public float speed;
+    private Vector2 startinPosition;
     public EnemyPaths enemypath;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,9 @@ public class Enemy : MonoBehaviour
         enemypath= GameObject.FindGameObjectWithTag("spawnpoint").GetComponent<EnemyPaths>();
 
         transform.position = enemypath.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position;
+        startinPosition = transform.position;
+        initialhealth = health;
+        
     }
 
     // Update is called once per frame
@@ -25,7 +29,9 @@ public class Enemy : MonoBehaviour
     {
      if (health >= maxhealth)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            resetStats();
+            
 
         }
         EnemyHealthBarMANAGER();
@@ -47,8 +53,17 @@ public class Enemy : MonoBehaviour
             waypointIndex++;
         }
         if (waypointIndex>= enemypath.enemyPaths[pathIndex].waypoints.Count) {
-            Destroy(this.gameObject);
+            resetStats();
+            waypointIndex = 0;
         }
+    }
+    public void resetStats() 
+    {
+        transform.position = startinPosition;
+        health = initialhealth;
+        healthPercentage = initialhealthPercentage;
+        healthspriteXWIDTH = initialhealthspriteXWIDTH;
+        gameObject.GetComponentInChildren<enemyHealthBarManager>().localScaleATruntime.x= initialhealthspriteXWIDTH;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

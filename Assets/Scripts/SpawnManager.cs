@@ -92,7 +92,7 @@ public class SpawnManager : MonoBehaviour
           
             if (timeCounter >= waveDelay)
             {
-                i = 0;
+                
                 waveNumber++;
                 amountOfEnemies = amountOfEnemies + extraEnemies;
                 canSpawn = true;

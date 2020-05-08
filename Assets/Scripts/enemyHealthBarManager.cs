@@ -10,6 +10,8 @@ public class enemyHealthBarManager : MonoBehaviour
     void Start()
     {
         gameObject.GetComponentInParent<Enemy>().healthspriteXWIDTH = this.gameObject.transform.localScale.x;
+        gameObject.GetComponentInParent<Enemy>().initialhealthspriteXWIDTH = this.gameObject.transform.localScale.x;
+        gameObject.GetComponentInParent<Enemy>().initialhealthPercentage= this.gameObject.transform.localScale.x;
 
     }
 
@@ -24,5 +26,6 @@ public class enemyHealthBarManager : MonoBehaviour
         localScaleATruntime = transform.localScale;
         localScaleATruntime.x = gameObject.GetComponentInParent<Enemy>().healthPercentage;
         transform.localScale= localScaleATruntime;
+
     }
 }
