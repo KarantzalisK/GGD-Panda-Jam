@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         waypointIndex = 0;
-        pathIndex = Random.Range(0,2);
+        pathIndex = Random.Range(0,4);
         enemypath= GameObject.FindGameObjectWithTag("spawnpoint").GetComponent<EnemyPaths>();
 
         transform.position = enemypath.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position;

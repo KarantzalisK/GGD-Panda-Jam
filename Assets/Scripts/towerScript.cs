@@ -7,21 +7,22 @@ public class towerScript : MonoBehaviour
     //public GameObject arrow;
     private Transform closesPosition;
     public int towerDMG;
-    private GameObject player,turretSpawner;
+    public float towerRespawnDelay;
+    private GameObject player;
     public Vector3 firringDistanceOffset;
     private bool startCoroutine;
     public GameObject[] enemyArrays;
     public float reloadDelay,shootinSpeed,radius;
     private bool canShootBolts=false;
     public int enemyindex;
-    public Vector2 towerEnemyDistance;
+    public Vector2 towerEnemyDistance,turretSpawningPosition;
     public Collider2D enemyColiders;
     // Start is called before the first frame update
     void Start()
     {
         //Instantiate(arrow);
         player = GameObject.FindGameObjectWithTag("Player");
-        turretSpawner = GameObject.FindGameObjectWithTag("spawnpoint");
+        turretSpawningPosition = this.gameObject.transform.position;
         enemyArrays = GameObject.FindGameObjectsWithTag("enemy");
         enemyindex = 0;
 
@@ -44,7 +45,8 @@ public class towerScript : MonoBehaviour
         }
         if (collision.CompareTag("wall") || collision.CompareTag("externalBorder"))
         {
-            StartCoroutine(destroyDelay());
+            player.GetComponent<PlayerScript>().canShoot = false;
+            StartCoroutine(turretRespawnWithDelay());
         }
 
     }
@@ -74,14 +76,11 @@ public class towerScript : MonoBehaviour
 
         }
     }
-    private IEnumerator destroyDelay()
+ 
+    private IEnumerator turretRespawnWithDelay( )
     {
-        player.GetComponent<PlayerScript>().canShoot = false;
-        turretSpawner.GetComponent<TurretSpawnManager>().InstantianObject(this.gameObject);
-        yield return new WaitForSeconds(0.1f);
-        Destroy(this.gameObject);
-
-
+        yield return new WaitForSeconds(towerRespawnDelay);
+        gameObject.transform.position = turretSpawningPosition;
 
     }
     private IEnumerator shootDelay(GameObject enemy)

@@ -1,7 +1,196 @@
 fileFormatVersion: 2
 guid: 52919de834a93854487aa54d3157a615
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4541762653195420319
+    second: baktest_0
+  - first:
+      213: -7339990714994921927
+    second: baktest_1
+  - first:
+      213: -6151596021481235300
+    second: baktest_2
+  - first:
+      213: 2717017086946603349
+    second: baktest_3
+  - first:
+      213: -6910896225510106364
+    second: baktest_4
+  - first:
+      213: 6232226769581983076
+    second: baktest_5
+  - first:
+      213: -3100533353279281401
+    second: baktest_6
+  - first:
+      213: 3518551079255523855
+    second: baktest_7
+  - first:
+      213: 2221349745192796051
+    second: baktest_8
+  - first:
+      213: -3801075869567244178
+    second: baktest_9
+  - first:
+      213: -6457497541234189786
+    second: baktest_10
+  - first:
+      213: -563495251656562882
+    second: baktest_11
+  - first:
+      213: -6194888334922663939
+    second: baktest_12
+  - first:
+      213: -1954619306568326809
+    second: baktest_13
+  - first:
+      213: 9093223984237187267
+    second: baktest_14
+  - first:
+      213: 6903897230338214757
+    second: baktest_15
+  - first:
+      213: 7598701981341046843
+    second: baktest_16
+  - first:
+      213: -8138078712533939233
+    second: baktest_17
+  - first:
+      213: -7131805395245860206
+    second: baktest_18
+  - first:
+      213: 7442732003397080015
+    second: baktest_19
+  - first:
+      213: -7867828822111207829
+    second: baktest_20
+  - first:
+      213: 9201987561774211847
+    second: baktest_21
+  - first:
+      213: -6940928215952522660
+    second: baktest_22
+  - first:
+      213: -2435505139233114791
+    second: baktest_23
+  - first:
+      213: 3500821832467029301
+    second: baktest_24
+  - first:
+      213: 5890995628550576544
+    second: baktest_25
+  - first:
+      213: 2658804810741438911
+    second: baktest_26
+  - first:
+      213: -4045127793417488056
+    second: baktest_27
+  - first:
+      213: 9044865439108780410
+    second: baktest_28
+  - first:
+      213: -2542939430374987673
+    second: baktest_29
+  - first:
+      213: -4842579452933659907
+    second: baktest_30
+  - first:
+      213: -7313656056807888924
+    second: baktest_31
+  - first:
+      213: -103500277329439510
+    second: baktest_32
+  - first:
+      213: -7722937097250195312
+    second: baktest_33
+  - first:
+      213: -2847862673468572452
+    second: baktest_34
+  - first:
+      213: 8199231420152012260
+    second: baktest_35
+  - first:
+      213: 768737241429875471
+    second: baktest_36
+  - first:
+      213: 1083557923637732548
+    second: baktest_37
+  - first:
+      213: 6672129243503220349
+    second: baktest_38
+  - first:
+      213: -5781556976290018527
+    second: baktest_39
+  - first:
+      213: 808721605344776282
+    second: baktest_40
+  - first:
+      213: -8643360863862173245
+    second: baktest_41
+  - first:
+      213: -517038885152531857
+    second: baktest_42
+  - first:
+      213: -7353127271092720890
+    second: baktest_43
+  - first:
+      213: -5499781532988562355
+    second: baktest_44
+  - first:
+      213: 4120551164677489005
+    second: baktest_45
+  - first:
+      213: -4356313918671757168
+    second: baktest_46
+  - first:
+      213: -5893904979883261014
+    second: baktest_47
+  - first:
+      213: 4037304633621300369
+    second: baktest_48
+  - first:
+      213: -6088359160113620467
+    second: baktest_49
+  - first:
+      213: -8207196531206503621
+    second: baktest_50
+  - first:
+      213: -8030688096440782521
+    second: baktest_51
+  - first:
+      213: 1993058646035162023
+    second: baktest_52
+  - first:
+      213: -7234719211354527002
+    second: baktest_53
+  - first:
+      213: 6027598287731305982
+    second: baktest_54
+  - first:
+      213: -3397546822258951285
+    second: baktest_55
+  - first:
+      213: -5359786663883531627
+    second: baktest_56
+  - first:
+      213: -1863475976513405610
+    second: baktest_57
+  - first:
+      213: -1681042354282003437
+    second: baktest_58
+  - first:
+      213: 3289783487455627049
+    second: baktest_59
+  - first:
+      213: 7827090729507698530
+    second: baktest_60
+  - first:
+      213: -5200010666525546979
+    second: baktest_61
+  - first:
+      213: -4948755191167853890
+    second: baktest_62
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +229,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +260,1380 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: baktest_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 549
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9249ddd115970f30800000000000000
+      internalID: 4541762653195420319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 549
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93eef0a655d132a90800000000000000
+      internalID: -7339990714994921927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 549
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c97e1d20421aaa0800000000000000
+      internalID: -6151596021481235300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 549
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5517e1c25a8c4b520800000000000000
+      internalID: 2717017086946603349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 549
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40bd1e69f709710a0800000000000000
+      internalID: -6910896225510106364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 549
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4654d982a315d7650800000000000000
+      internalID: 6232226769581983076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 549
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707a98fa751b8f4d0800000000000000
+      internalID: -3100533353279281401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 485
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02c713809764d030800000000000000
+      internalID: 3518551079255523855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 485
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ffe14f2d1d3de10800000000000000
+      internalID: 2221349745192796051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 485
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68a226b2addf3bc0800000000000000
+      internalID: -3801075869567244178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 485
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a17c4133c5266a0800000000000000
+      internalID: -6457497541234189786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_11
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 485
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37246cdd001e28f0800000000000000
+      internalID: -563495251656562882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_12
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 485
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df739bd91e5570aa0800000000000000
+      internalID: -6194888334922663939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 485
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761efd0c81ccfd4e0800000000000000
+      internalID: -1954619306568326809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 421
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c01583290f913e70800000000000000
+      internalID: 9093223984237187267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_15
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 421
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bcc1cd3f19fcf50800000000000000
+      internalID: 6903897230338214757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 421
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38d3ef3133047960800000000000000
+      internalID: 7598701981341046843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 421
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb0f31478cbf0f80800000000000000
+      internalID: -8138078712533939233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 421
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29af72967ccb60d90800000000000000
+      internalID: -7131805395245860206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_19
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 421
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc31ae4e255e94760800000000000000
+      internalID: 7442732003397080015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_20
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 421
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e3b703f5bdfc290800000000000000
+      internalID: -7867828822111207829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 357
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7036d17eee604bf70800000000000000
+      internalID: 9201987561774211847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 357
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c520aacef8edcaf90800000000000000
+      internalID: -6940928215952522660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_23
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 357
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9553f5fcaf8533ed0800000000000000
+      internalID: -2435505139233114791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_24
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 357
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d112298ea659030800000000000000
+      internalID: 3500821832467029301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 357
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9d225ff4501c150800000000000000
+      internalID: 5890995628550576544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_26
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 357
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9d75f63e8f5e420800000000000000
+      internalID: 2658804810741438911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 357
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8497a4234b1dcd7c0800000000000000
+      internalID: -4045127793417488056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 293
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a715943f131d58d70800000000000000
+      internalID: 9044865439108780410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_29
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 293
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7682a27af0aa5bcd0800000000000000
+      internalID: -2542939430374987673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_30
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 293
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2a84705a3bbccb0800000000000000
+      internalID: -4842579452933659907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_31
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 293
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7e494d09ca08a90800000000000000
+      internalID: -7313656056807888924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 293
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4df9fcb0b409ef0800000000000000
+      internalID: -103500277329439510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_33
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 293
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09837bfb0ad92d490800000000000000
+      internalID: -7722937097250195312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_34
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 293
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdcbfc2bcfb5a78d0800000000000000
+      internalID: -2847862673468572452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 229
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4edd165098589c170800000000000000
+      internalID: 8199231420152012260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_36
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 229
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b9a09b27a1baa00800000000000000
+      internalID: 768737241429875471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 229
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4acfbc032990f00800000000000000
+      internalID: 1083557923637732548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 229
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d76518e423a289c50800000000000000
+      internalID: 6672129243503220349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_39
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 229
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b4d83ef88c3cfa0800000000000000
+      internalID: -5781556976290018527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 229
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5052c8e308293b00800000000000000
+      internalID: 808721605344776282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_41
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 229
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c15bfbb61d9c0880800000000000000
+      internalID: -8643360863862173245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 165
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a5b639fdb13d8f0800000000000000
+      internalID: -517038885152531857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_43
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 165
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60be74a94b174f990800000000000000
+      internalID: -7353127271092720890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 165
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44a6f7b5d9dca3b0800000000000000
+      internalID: -5499781532988562355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_45
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 165
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d618c61e3732f2930800000000000000
+      internalID: 4120551164677489005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_46
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 165
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090ea7b52934b83c0800000000000000
+      internalID: -4356313918671757168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_47
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 165
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa30726e5a4a43ea0800000000000000
+      internalID: -5893904979883261014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_48
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 165
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19449097c23670830800000000000000
+      internalID: 4037304633621300369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 101
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a9e64f99dc18ba0800000000000000
+      internalID: -6088359160113620467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 101
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b334e9b0d3e2a1e80800000000000000
+      internalID: -8207196531206503621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_51
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 101
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74170b589b34d8090800000000000000
+      internalID: -8030688096440782521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_52
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 101
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a362756744c8ab10800000000000000
+      internalID: 1993058646035162023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_53
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 101
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eae48d553d199b90800000000000000
+      internalID: -7234719211354527002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_54
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 101
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd2af405b456a350800000000000000
+      internalID: 6027598287731305982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_55
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 101
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b7f778a2d79d0d0800000000000000
+      internalID: -3397546822258951285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 37
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a98533d663e95b0800000000000000
+      internalID: -5359786663883531627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_57
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 37
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65db174f87a9326e0800000000000000
+      internalID: -1863475976513405610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_58
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 37
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31482a4a2ecbba8e0800000000000000
+      internalID: -1681042354282003437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_59
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 37
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9270dbdd6a8a7ad20800000000000000
+      internalID: 3289783487455627049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_60
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 37
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2673f0d7c896f9c60800000000000000
+      internalID: 7827090729507698530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_61
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 37
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16a08189d9d5d7b0800000000000000
+      internalID: -5200010666525546979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: baktest_62
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 37
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebad11e8f5d725bb0800000000000000
+      internalID: -4948755191167853890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

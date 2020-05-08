@@ -8,11 +8,12 @@ public class TurretSpawnManager : MonoBehaviour
     public Vector3 SpawnPoint;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
         turretRb = GameObject.FindGameObjectWithTag("turret").GetComponent<Rigidbody2D>();
-        SpawnPoint = GameObject.FindGameObjectWithTag("spawnpoint").transform.position;
+        SpawnPoint = GameObject.FindGameObjectWithTag("turret").transform.position;
 
     }
 
