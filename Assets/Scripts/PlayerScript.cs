@@ -88,7 +88,7 @@ public class PlayerScript : MonoBehaviour
         if (holdingObject)
         {
             animatorComponent.SetBool("HoldingOBJECTMovement", true);
-
+           
 
         }
         if (!holdingObject)
@@ -133,6 +133,7 @@ public class PlayerScript : MonoBehaviour
 
 
     }
+  
     private void ShootinTurrets()
     {   if (Input.GetKey(KeyCode.Mouse0) && holdingObject)
         {

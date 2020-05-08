@@ -73,7 +73,7 @@ public class towerScript : MonoBehaviour
          if (enemyColiders.CompareTag("enemy"))
         {
             GameObject.FindGameObjectWithTag("turretbolt").transform.position = Vector2.MoveTowards(GameObject.FindGameObjectWithTag("turretbolt").transform.position, enemyColiders.gameObject.transform.position, shootinSpeed * Time.deltaTime);
-
+            StartCoroutine(shootDelay(enemyColiders.gameObject));
         }
     }
  
