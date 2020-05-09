@@ -11,6 +11,7 @@ TagManager:
   - spawnpoint
   - externalBorder
   - turretbolt
+  - collectible
   layers:
   - Default
   - TransparentFX
