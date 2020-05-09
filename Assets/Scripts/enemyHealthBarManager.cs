@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class enemyHealthBarManager : MonoBehaviour
 {
-    public float healthbarScale;
-    public Vector3 localScaleATruntime;
+    //public float healthbarScale;
+    //public Vector3 localScaleATruntime;
+    public Slider enemyHealthSlider;
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponentInParent<Enemy>().healthspriteXWIDTH = this.gameObject.transform.localScale.x;
-        gameObject.GetComponentInParent<Enemy>().initialhealthspriteXWIDTH = this.gameObject.transform.localScale.x;
-        gameObject.GetComponentInParent<Enemy>().initialhealthPercentage= this.gameObject.transform.localScale.x;
-
+        enemyHealthSlider.maxValue = gameObject.GetComponent<EnemyResetAndParameters>().maxhealth;
     }
 
     // Update is called once per frame
@@ -23,9 +22,11 @@ public class enemyHealthBarManager : MonoBehaviour
     }
     void HealthBarChangeScale()
     {
-        localScaleATruntime = transform.localScale;
-        localScaleATruntime.x = gameObject.GetComponentInParent<Enemy>().healthPercentage;
-        transform.localScale= localScaleATruntime;
+        enemyHealthSlider.value = gameObject.GetComponentInParent<EnemyResetAndParameters>().health; 
+        //if (enemyHealthSlider.value>enemyHealthSlider.maxValue)
+        //{
+        //    enemyHealthSlider.value = 0;
+        //}
 
     }
 }

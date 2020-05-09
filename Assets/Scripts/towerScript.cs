@@ -39,7 +39,7 @@ public class towerScript : MonoBehaviour
     {
         if (collision.CompareTag("enemy"))
         {
-            collision.gameObject.GetComponent<Enemy>().health = collision.gameObject.GetComponent<Enemy>().health + towerDMG;
+            collision.gameObject.GetComponent<EnemyResetAndParameters>().health = collision.gameObject.GetComponent<EnemyResetAndParameters>().health + towerDMG;
 
 
         }

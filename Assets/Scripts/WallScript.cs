@@ -7,7 +7,6 @@ public class WallScript : MonoBehaviour
     public int wallHealth, maxWallHealth;
     private GameObject enemy;
     public Slider healthslider;
-    public Image darkenSpriterSlider;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +17,7 @@ public class WallScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (wallHealth != 0)
-        {
-            darkenSpriterSlider.enabled = true;
-        }
+    
       
     }
 
@@ -29,7 +25,7 @@ public class WallScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "enemy")
         {
-            wallHealth = wallHealth + collision.gameObject.GetComponent<Enemy>().damage;
+            wallHealth = wallHealth + collision.gameObject.GetComponent<EnemyResetAndParameters>().damage;
             healthslider.value = wallHealth;
             Debug.Log(healthslider.maxValue);
         }

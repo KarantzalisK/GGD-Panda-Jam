@@ -582,6 +582,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5002774136196417237, guid: 2d7130a828fb12d448628183820c9dcc,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5002774136499739800, guid: 2d7130a828fb12d448628183820c9dcc,
         type: 3}
       propertyPath: m_IsActive
@@ -642,25 +647,35 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5002774136834036023, guid: 2d7130a828fb12d448628183820c9dcc,
+        type: 3}
+      propertyPath: m_Name
+      value: coinsTxt
+      objectReference: {fileID: 0}
     - target: {fileID: 5002774136834036025, guid: 2d7130a828fb12d448628183820c9dcc,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5002774136834036025, guid: 2d7130a828fb12d448628183820c9dcc,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5002774136834036025, guid: 2d7130a828fb12d448628183820c9dcc,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5002774136834036025, guid: 2d7130a828fb12d448628183820c9dcc,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002774136834036025, guid: 2d7130a828fb12d448628183820c9dcc,
+        type: 3}
+      propertyPath: m_text
+      value: 0/30
       objectReference: {fileID: 0}
     - target: {fileID: 5002774137071600114, guid: 2d7130a828fb12d448628183820c9dcc,
         type: 3}
@@ -676,6 +691,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002774137071600114, guid: 2d7130a828fb12d448628183820c9dcc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.13999939
       objectReference: {fileID: 0}
     - target: {fileID: 6035968703507542858, guid: 2d7130a828fb12d448628183820c9dcc,
         type: 3}
@@ -2805,7 +2825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277713230}
   m_Layer: 0
-  m_Name: BambooColectorInvRectangleEdge
+  m_Name: CollectibleColectorInvRectangleEdge
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3405,6 +3425,26 @@ PrefabInstance:
       propertyPath: objectATMaxEdge
       value: 
       objectReference: {fileID: 1277713230}
+    - target: {fileID: 5333675507209759849, guid: c8dd78228b223cb468baf3fd226325fe,
+        type: 3}
+      propertyPath: coinsToUpgrade
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333675507209759849, guid: c8dd78228b223cb468baf3fd226325fe,
+        type: 3}
+      propertyPath: CoinMultiplier
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333675507209759849, guid: c8dd78228b223cb468baf3fd226325fe,
+        type: 3}
+      propertyPath: coinsGatheredTextobj
+      value: 
+      objectReference: {fileID: 192437113}
+    - target: {fileID: 5333675507209759849, guid: c8dd78228b223cb468baf3fd226325fe,
+        type: 3}
+      propertyPath: coinMultiplier
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5333675507209759851, guid: c8dd78228b223cb468baf3fd226325fe,
         type: 3}
       propertyPath: throwingSpeed
@@ -4804,6 +4844,11 @@ PrefabInstance:
     - target: {fileID: 5906585352129044983, guid: fc4791a2ef973a343a591f429d04b43f,
         type: 3}
       propertyPath: m_Name
+      value: collectible
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906585352129044983, guid: fc4791a2ef973a343a591f429d04b43f,
+        type: 3}
+      propertyPath: m_TagString
       value: collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
