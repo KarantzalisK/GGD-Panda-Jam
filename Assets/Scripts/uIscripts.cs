@@ -64,7 +64,7 @@ public class uIscripts : MonoBehaviour
     }
     public void WaveIndicateVoid()
     {
-        waveIndexTXTobj.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave " + waveIndexObj.GetComponent<SpawnManager>().waveNumber.ToString();
+        waveIndexTXTobj.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave " + (waveIndexObj.GetComponent<SpawnManager>().waveNumber+1).ToString();
     }
     
 

@@ -8,7 +8,6 @@ public class waypointList
     public List<GameObject> waypoints;
 }
 
-[CreateAssetMenu(fileName = "New Enemy Paths", menuName = "Enemy Paths")]
 public class EnemyPaths : MonoBehaviour
 {
     public List<waypointList> enemyPaths;

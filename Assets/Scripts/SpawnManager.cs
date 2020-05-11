@@ -6,102 +6,71 @@ using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
 
+
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField]
     public List<EnemyPaths> enemyPaths;
 
     [SerializeField]
-    public List<Wave> Waves;
-
-    public float timeCounter, instanciateDelay, waveDelay;
+    public List<EnemyWavesParameters> activeWave;
     [HideInInspector]
-    public bool canSpawn = true,noEnemiesinList=false;
-    public int i = 0, amountOfEnemies=10, enemyIndexer, waveNumber = 1, extraEnemies;
+    public float timeCounter, instanciateDelay;
+    //[HideInInspector]
+    public bool canSpawn = true;
+    public int i = 0, amountOfEnemies = 0, waveNumber = 0;
+    private int  enemyIndexer;
     public GameObject[] enemyPrefabs;
-    //public List<GameObject> currentEnemies;
 
 
     void Start()
     {
-        waveNumber = 1;
+        waveNumber = 0;
     }
 
     void Update()
-    {   
-            timeCounter += Time.deltaTime;
-        
-        enemyInstantiate();
-
-        //private bool subWaveInstanciation(SubWave subWave)
-        //{
-        //    if (timeCounter >= subWave.whenToSpawn && !subWave.isInstanciated)
-        //    {
-        //        subWave.isInstanciated = true;
-        //        //StartCoroutine(instanciateEnemies(subWave.enemy, subWave.amountOfEnemies, subWave.instanciateDelay));
-        //        return true;
-
-        //    }
-        //    else return false;
-        //}
-
-        //private IEnumerator instanciateEnemies()
-        //{
-        //    amountOfEnemies = 10;
-        //    //GameObject enemy, int amountOfEnemies, float instanciateDelay
-        //    if (i < amountOfEnemies )
-        //    {
-        //        Instantiate(GameObject.FindGameObjectWithTag("enemy"), GameObject.FindGameObjectWithTag("enemy").transform.position, Quaternion.identity);
-        //        yield return new WaitForSeconds(instanciateDelay);
-        //        i++;
-        //    }
-
-        //}
-
-        //private IEnumerator checkIfSubWavesAreReady() {
-
-        //}
-
-    }
-    private void enemyInstantiate()
     {
+        amountOfEnemies = activeWave[waveNumber].maxEnemies;
+        instanciateDelay = activeWave[waveNumber].enemySpawningRate;
+
+        timeCounter += Time.deltaTime;
         if (canSpawn)
         {
-            if (i < amountOfEnemies)
-            {
-                if (timeCounter >= instanciateDelay/waveNumber)
-                {   
-                    enemyIndexer = UnityEngine.Random.Range(0, enemyPrefabs.Length);
-                    //currentEnemies.Add();
-                    Instantiate(enemyPrefabs[enemyIndexer], gameObject.transform.position, Quaternion.identity);
-                    timeCounter = 0;
-                    i++;
-
-
-                }
-
-            }
+            enemyInstantiateCheck();
         }
-            if (i >= amountOfEnemies)
-            {
-                canSpawn = false;
+       
 
-            if (GameObject.FindGameObjectsWithTag("enemy")==null )
-            {
-                timeCounter = 0;
-            }
-          
-            if (timeCounter >= waveDelay)
+    }
+    private void enemyInstantiateCheck()
+    {
+
+        if (i < amountOfEnemies)
+        {
+            if (timeCounter >= instanciateDelay)
             {
                 
-                waveNumber++;
-                amountOfEnemies = amountOfEnemies + extraEnemies;
-                canSpawn = true;
+                timeCounter = 0;
+                i++;
+                enemyInstantiatNaddToList();
+
 
             }
 
         }
+
+        else
+        {
+            canSpawn = false;
+
         }
     }
+    private void enemyInstantiatNaddToList()
+    {
+        enemyIndexer = UnityEngine.Random.Range(0, activeWave[waveNumber].numberOFenemyTypes);
+       activeWave[waveNumber].currentEnemies.Add(Instantiate(enemyPrefabs[enemyIndexer], gameObject.transform.position, Quaternion.identity));
+    }
+
+
+}
 
 

@@ -34,8 +34,7 @@ public class EnemyMovementWithWaypoints : MonoBehaviour
         }
         if (waypointIndex >= enemyPathnWaypoints.enemyPaths[pathIndex].waypoints.Count)
         {
-            gameObject.GetComponent<EnemyResetAndParameters>().resetStats();
-            waypointIndex = 0;
+            Destroy(this.gameObject);
         }
     }
 }

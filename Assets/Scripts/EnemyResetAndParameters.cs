@@ -23,8 +23,7 @@ public class EnemyResetAndParameters : MonoBehaviour
     {
      if (health >= maxhealth)
         {
-            resetStats();
-            
+            Destroy(this.gameObject);            
 
         }
     }
@@ -32,12 +31,12 @@ public class EnemyResetAndParameters : MonoBehaviour
     
   
   
-    public void resetStats() 
-    {
-        transform.position = startinPosition;
-        health = initialHealth;
+    //public void resetStats() 
+    //{
+    //    transform.position = startinPosition;
+    //    health = initialHealth;
     
-    }
+    //}
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("turretbolt"))
