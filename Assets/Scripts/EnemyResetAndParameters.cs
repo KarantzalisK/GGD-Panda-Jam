@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyResetAndParameters : MonoBehaviour
 {
     public int damage;
-    public int pathIndex,waypointIndex;
     public float health,maxhealth;
     public float initialHealth;
     public float speed;

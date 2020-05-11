@@ -12,6 +12,7 @@ TagManager:
   - externalBorder
   - turretbolt
   - collectible
+  - enemyStopper
   layers:
   - Default
   - TransparentFX

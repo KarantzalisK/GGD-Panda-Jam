@@ -16,7 +16,9 @@ public class PlayerScript : MonoBehaviour
     private GameObject turret;
     public float throwingSpeed;
     private Rigidbody2D turretRb;
+    [HideInInspector]
     public Vector2 onMouseclick;
+    [HideInInspector]
     public bool canCarry = false, carrying = false,canShoot=false;
 
 

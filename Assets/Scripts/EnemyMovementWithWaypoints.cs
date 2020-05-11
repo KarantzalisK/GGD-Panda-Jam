@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyMovementWithWaypoints : MonoBehaviour
 {
     private EnemyPaths enemyPathnWaypoints;
+    [HideInInspector]
     public int pathIndex, waypointIndex;
     private float speed;
 

@@ -15,6 +15,7 @@ public class SpawnManager : MonoBehaviour
     public List<Wave> Waves;
 
     public float timeCounter, instanciateDelay, waveDelay;
+    [HideInInspector]
     public bool canSpawn = true,noEnemiesinList=false;
     public int i = 0, amountOfEnemies=10, enemyIndexer, waveNumber = 1, extraEnemies;
     public GameObject[] enemyPrefabs;

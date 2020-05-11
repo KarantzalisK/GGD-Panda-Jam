@@ -23,10 +23,11 @@ public class coinCollectorScript : MonoBehaviour
     {
         if (collision.gameObject.tag =="collectible")
         {
+            CollectibleRectanglePosition(collision.gameObject);
             if (coinsGathered < coinsToUpgrade && coinsGathered<coinsToUpgrade- coinMultiplier)
             {
                 coinsGathered = coinsGathered + coinMultiplier;
-                CollectibleRectanglePosition(collision.gameObject);
+                
             }
             else coinsGathered = coinsToUpgrade;
         }
