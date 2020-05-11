@@ -8,6 +8,7 @@ public class EnemyWavesParameters : MonoBehaviour
     public int nextWaveStartDelay;
     public int numberOFenemyTypes;
     public float enemySpawningRate;
+    [HideInInspector]
     public List<GameObject> currentEnemies;
     private GameObject spawnManager; 
 
