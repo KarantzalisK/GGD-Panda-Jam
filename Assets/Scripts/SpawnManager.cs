@@ -16,8 +16,9 @@ public class SpawnManager : MonoBehaviour
     public List<EnemyWavesParameters> activeWave;
     [HideInInspector]
     public float timeCounter, instanciateDelay;
-    //[HideInInspector]
+    [HideInInspector]
     public bool canSpawn = true;
+    [HideInInspector]
     public int i = 0, amountOfEnemies = 0, waveNumber = 0;
     private int  enemyIndexer;
     public GameObject[] enemyPrefabs;

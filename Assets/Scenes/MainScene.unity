@@ -2102,6 +2102,18 @@ Transform:
   m_Father: {fileID: 158990213}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &844521426 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2370501696465830109, guid: 48018d785d9b2e54890d1bd0669aad6e,
+    type: 3}
+  m_PrefabInstance: {fileID: 964321828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f0a07deb86fc64e90073fc4419124d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &861888477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,6 +2520,16 @@ PrefabInstance:
       propertyPath: activeWave.Array.data[4]
       value: 
       objectReference: {fileID: 1677793502}
+    - target: {fileID: 2370501696465830111, guid: 48018d785d9b2e54890d1bd0669aad6e,
+        type: 3}
+      propertyPath: enemyPaths.Array.data[0]
+      value: 
+      objectReference: {fileID: 844521426}
+    - target: {fileID: 2370501696465830111, guid: 48018d785d9b2e54890d1bd0669aad6e,
+        type: 3}
+      propertyPath: enemyPaths.Array.data[1]
+      value: 
+      objectReference: {fileID: 844521426}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48018d785d9b2e54890d1bd0669aad6e, type: 3}
 --- !u!1 &981606974
