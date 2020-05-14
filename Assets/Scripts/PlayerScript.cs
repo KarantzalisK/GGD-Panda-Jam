@@ -8,18 +8,20 @@ public class PlayerScript : MonoBehaviour
     Rigidbody2D rb;
     Vector2 movement;
     public float speed;
+    [HideInInspector]
     public bool holdingObject = false;
     public Transform  newTurretPosition;
     private Transform turretTransf;
     private Animator animatorComponent;
     private SpriteRenderer srOFobj;
     private GameObject turret;
-    public float throwingSpeed;
+    public Vector2 throwingSpeed;
     private Rigidbody2D turretRb;
     [HideInInspector]
     public Vector2 onMouseclick;
     [HideInInspector]
     public bool canCarry = false, carrying = false,canShoot=false;
+   
 
 
     // Start is called before the first frame update
@@ -39,6 +41,7 @@ public class PlayerScript : MonoBehaviour
         AnimationControl();
         PickUpTurret();
         FindInstantiatedTurret();
+
     }
 
 
@@ -46,7 +49,6 @@ public class PlayerScript : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
         ShootinTurrets();
-
 
     }
     private void FindInstantiatedTurret()
@@ -65,14 +67,17 @@ public class PlayerScript : MonoBehaviour
             holdingObject = true;
 
 
+
         }
-        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKeyUp(KeyCode.LeftControl) )
         {
+            
             carrying = false;
             holdingObject = false;
 
 
         }
+        
         if (carrying)
         {
             turretTransf.position = newTurretPosition.position;
@@ -137,17 +142,21 @@ public class PlayerScript : MonoBehaviour
     }
   
     private void ShootinTurrets()
-    {   if (Input.GetKey(KeyCode.Mouse0) && holdingObject)
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0)&&carrying&&holdingObject)
+        {
+            carrying = false;
+            holdingObject = false;
+            canShoot = true;
+        }
+        if (canShoot)
         {
             onMouseclick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            canShoot = true;
-            
-        }
-    if (canShoot)
-        {
             turretRb.MovePosition(turretRb.position + onMouseclick * throwingSpeed * Time.fixedDeltaTime);
+
         }
-        Debug.Log("eisai edw");
+       
+   
 
 
     }

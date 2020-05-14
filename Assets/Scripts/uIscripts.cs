@@ -24,9 +24,10 @@ public class uIscripts : MonoBehaviour
     void Update()
     {
         wallhealthInt = wallHealthOBJ.GetComponent<WallScript>().wallHealth;
-        if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1 )
+        if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1)
         {
             pauseMenu.SetActive(true);
+            GetComponent<UiAnimationWithdotween>().UiScaleAnimation(pauseMenu);
 
         }
         if (pauseMenu.activeSelf || mainMenu.activeSelf)

@@ -11,5 +11,5 @@ public class waypointList
 public class EnemyPaths : MonoBehaviour
 {
     public List<waypointList> enemyPaths;
- 
+     
 }
