@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyWavesParameters : MonoBehaviour
 {
-    public int maxEnemies;
+    public int maxEnemies,amountOfFirstEnemyType;
     public int nextWaveStartDelay;
     public int numberOFenemyTypes;
     public float enemySpawningRate;

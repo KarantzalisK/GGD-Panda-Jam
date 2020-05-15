@@ -58,13 +58,15 @@ public class TurretCollisionControllerAndReset : MonoBehaviour
                 returnTurret = true;
             }
         }
+
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
         if (collision.CompareTag("turretPlatform"))
         {
 
             returnTurret = false;
         }
-
-
     }
 
     private IEnumerator TurretRecover()

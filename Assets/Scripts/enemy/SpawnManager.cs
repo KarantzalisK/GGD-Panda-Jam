@@ -19,7 +19,7 @@ public class SpawnManager : MonoBehaviour
     [HideInInspector]
     public bool canSpawn = true;
     [HideInInspector]
-    public int i = 0, amountOfEnemies = 0, waveNumber = 0;
+    public int i = 0, amountOfEnemies = 0, waveNumber = 0,amountOfEasiestEnemy;
     private int  enemyIndexer;
     public GameObject[] enemyPrefabs;
 
@@ -31,12 +31,14 @@ public class SpawnManager : MonoBehaviour
 
     void Update()
     {
+        amountOfEasiestEnemy = activeWave[waveNumber].amountOfFirstEnemyType;
         amountOfEnemies = activeWave[waveNumber].maxEnemies;
         instanciateDelay = activeWave[waveNumber].enemySpawningRate;
 
         timeCounter += Time.deltaTime;
         if (canSpawn)
         {
+            enemySelector();
             enemyInstantiateCheck();
         }
        
@@ -46,7 +48,7 @@ public class SpawnManager : MonoBehaviour
     {
 
         if (i < amountOfEnemies)
-        {
+        {  
             if (timeCounter >= instanciateDelay)
             {
                 
@@ -67,10 +69,19 @@ public class SpawnManager : MonoBehaviour
     }
     private void enemyInstantiatNaddToList()
     {
-        enemyIndexer = UnityEngine.Random.Range(0, activeWave[waveNumber].numberOFenemyTypes);
        activeWave[waveNumber].currentEnemies.Add(Instantiate(enemyPrefabs[enemyIndexer], gameObject.transform.position, Quaternion.identity));
     }
-
+    private void enemySelector()
+    {
+        if (i < amountOfEasiestEnemy)
+        {
+            enemyIndexer = 0;
+        }
+         if (i>amountOfEasiestEnemy && i <= amountOfEnemies)
+        {
+            enemyIndexer = 1;
+        }
+    }
 
 }
 
