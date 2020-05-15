@@ -13,6 +13,7 @@ TagManager:
   - turretbolt
   - collectible
   - enemyStopper
+  - turretPlatform
   layers:
   - Default
   - TransparentFX

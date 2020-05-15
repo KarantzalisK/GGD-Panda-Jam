@@ -6,6 +6,7 @@ public class UiAnimationWithdotween : MonoBehaviour
 {
     [HideInInspector]
     public bool restartUiAnimations=true;
+    private bool jump;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +20,8 @@ public class UiAnimationWithdotween : MonoBehaviour
     }
     public void UiScaleAnimation(GameObject uiObj)
     {
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //{
-        //    uiObj.GetComponent<RectTransform>().DOBlendableScaleBy(new Vector3(1, 1, 0), 0.5f);
-        //}
-        //else if (Input.GetKeyUp(KeyCode.Escape))
-        //{ uiObj.GetComponent<RectTransform>().DOPlayBackwards(); }
+        uiObj.GetComponents<RectTransform>();
+        uiObj.transform.DOLocalJump(new Vector3(0, 0, 0),4f, 10, 2f);
 
 
     }

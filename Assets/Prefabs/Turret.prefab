@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 372870020289736190}
   - component: {fileID: 372870020289736161}
   - component: {fileID: 372870020289736162}
+  - component: {fileID: 386656707196899621}
   m_Layer: 0
   m_Name: Turret
   m_TagString: turret
@@ -145,14 +146,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerDMG: 30
-  firringDistanceOffset: {x: 0, y: 0, z: 0}
-  enemyArrays: []
   reloadDelay: 0
-  shootinSpeed: 0
-  radius: 0
-  enemyindex: 0
-  towerEnemyDistance: {x: 0, y: 0}
-  enemyColiders: {fileID: 0}
+  shootinSpeed: 10
+  radius: 40
+  turretRespawnDelay: 5
+--- !u!114 &386656707196899621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372870020289736189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed45e92aa06d4045bfef44b6075d6b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretSpawningPosition: {x: 0, y: 0}
 --- !u!1 &830532505927223168
 GameObject:
   m_ObjectHideFlags: 0

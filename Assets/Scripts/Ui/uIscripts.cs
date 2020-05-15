@@ -54,9 +54,7 @@ public class uIscripts : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
-       // Destroy(GameObject.Find("Game"));
-       // Instantiate(gamePrefab);
-        //pauseMenu = GameObject.Find("PauseMenu");
+ 
 
     }
     public void SceneQuiting()

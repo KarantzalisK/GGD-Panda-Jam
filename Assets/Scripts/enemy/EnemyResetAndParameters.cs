@@ -36,7 +36,7 @@ public class EnemyResetAndParameters : MonoBehaviour
     {
         if (collision.CompareTag("turretbolt"))
         {
-            health=health+collision.gameObject.GetComponentInParent<towerScript>().towerDMG/3;
+            health=health+collision.gameObject.GetComponentInParent<towerParameters>().towerDMG/3;
         }
     }
 

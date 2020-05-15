@@ -15,6 +15,10 @@ GameObject:
   - component: {fileID: 5333675507209759850}
   - component: {fileID: 5333675507209759860}
   - component: {fileID: 5333675507209759851}
+  - component: {fileID: 474520587208787507}
+  - component: {fileID: 8452555969056291764}
+  - component: {fileID: 132004657943700634}
+  - component: {fileID: 8817989108550837923}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -125,9 +129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bce16cca902a0949b2ed3c00184c5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bambooTextobj: {fileID: 0}
-  bambooscore: 0
-  bambootoupgrade: 300
+  coinsGatheredTextobj: {fileID: 0}
+  coinsToUpgrade: 0
+  coinMultiplier: 0
   objectATMaxEdge: {fileID: 0}
 --- !u!50 &5333675507209759850
 Rigidbody2D:
@@ -182,13 +186,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6.78
-  holdingObject: 0
-  newTurretPosition: {fileID: 5333675507562928701}
-  throwingSpeed: 0
-  onMouseclick: {x: 0, y: 0}
   canCarry: 0
   carrying: 0
   canShoot: 0
+  holdingObject: 0
+  throwingSpeed: 10
+  movement: {x: 0, y: 0}
+  newTurretPosition: {fileID: 5333675507562928701}
+  turretObj: {fileID: 0}
+--- !u!114 &474520587208787507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333675507209759853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3382b269cf96ec4e9643b1f5064a66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickVector: {x: 0, y: 0, z: 0}
+--- !u!114 &8452555969056291764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333675507209759853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd2d7a88fda2e9f41a8cf963070e3127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {x: 0, y: 0}
+--- !u!114 &132004657943700634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333675507209759853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd720a59f8c66604e826ec4c464b7193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8817989108550837923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333675507209759853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc97caaf54c3a7b4880c82ad04475f61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5333675507562928700
 GameObject:
   m_ObjectHideFlags: 0
