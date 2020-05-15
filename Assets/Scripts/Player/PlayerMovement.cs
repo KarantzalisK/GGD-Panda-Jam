@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Vector2 movementOFplayer;
     private float speed;
     [HideInInspector]
     public  Vector2 movement;
