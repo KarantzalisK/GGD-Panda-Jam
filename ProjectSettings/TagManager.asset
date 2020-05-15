@@ -54,3 +54,6 @@ TagManager:
   - name: PlayerCollectiblesAndEnemmies
     uniqueID: 2515457075
     locked: 0
+  - name: UpgradeUi
+    uniqueID: 2353005811
+    locked: 0
