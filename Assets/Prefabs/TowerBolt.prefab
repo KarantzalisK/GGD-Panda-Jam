@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7992160690412603202}
   - component: {fileID: 9109942037036484839}
   - component: {fileID: 7948957352242615766}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: TowerBolt
   m_TagString: turretbolt
   m_Icon: {fileID: 0}

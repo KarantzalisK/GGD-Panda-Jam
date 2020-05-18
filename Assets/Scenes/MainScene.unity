@@ -5929,57 +5929,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 372870020289736162, guid: b44d6f758dce22248a2cdfb5cd077abd,
-        type: 3}
-      propertyPath: towerRespawnDelay
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 372870020289736162, guid: b44d6f758dce22248a2cdfb5cd077abd,
-        type: 3}
-      propertyPath: turretRespawnDelay
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 372870020289736162, guid: b44d6f758dce22248a2cdfb5cd077abd,
-        type: 3}
-      propertyPath: radius
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 372870020289736162, guid: b44d6f758dce22248a2cdfb5cd077abd,
-        type: 3}
-      propertyPath: boltSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 372870020289736162, guid: b44d6f758dce22248a2cdfb5cd077abd,
-        type: 3}
-      propertyPath: reloadDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 372870020289736162, guid: b44d6f758dce22248a2cdfb5cd077abd,
-        type: 3}
-      propertyPath: boltPrefab
-      value: 
-      objectReference: {fileID: 5586784112083079378, guid: 15b4b8699f460e64ca944ec2735c723d,
-        type: 3}
-    - target: {fileID: 372870020289736162, guid: b44d6f758dce22248a2cdfb5cd077abd,
-        type: 3}
-      propertyPath: boltLifeSpam
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 372870020289736162, guid: b44d6f758dce22248a2cdfb5cd077abd,
-        type: 3}
-      propertyPath: boltSpeed.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 372870020289736162, guid: b44d6f758dce22248a2cdfb5cd077abd,
-        type: 3}
-      propertyPath: boltSpeed.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 372870020289736162, guid: b44d6f758dce22248a2cdfb5cd077abd,
-        type: 3}
-      propertyPath: boltdmg
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 372870020289736189, guid: b44d6f758dce22248a2cdfb5cd077abd,
         type: 3}
       propertyPath: m_Name

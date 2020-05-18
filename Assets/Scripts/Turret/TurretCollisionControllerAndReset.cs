@@ -10,6 +10,7 @@ public class TurretCollisionControllerAndReset : MonoBehaviour
     public Vector2 turretSpawningPosition;
     private float towerRespawnDelay;
     private float towerdamage;
+    [HideInInspector]
     public bool returnTurret=false;
     private GameObject playerOBJ;
 

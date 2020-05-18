@@ -10,6 +10,7 @@ public class towerParameters : MonoBehaviour
     public float turretRespawnDelay;
     public GameObject boltPrefab;
     public float boltLifeSpam;
+    public LayerMask enemieLayer;
     // Start is called before the first frame update
     void Start()
     {

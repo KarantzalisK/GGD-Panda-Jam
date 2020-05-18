@@ -5,14 +5,17 @@ using UnityEngine;
 
 public class TurretShooting : MonoBehaviour
 
-{
-    private float radius;
+{   
     private towerParameters tower;
-    public float smallestDistance;
-    public EnemyResetAndParameters enemyToShoot;
-    public List<GameObject> boltsAtHand;
-    private bool canShoot;
+    private float smallestDistance;
+    [HideInInspector]
+    public Collider2D enemyToShoot;
+    private List<GameObject> boltsAtHand;
+    [HideInInspector]
     private float timer;
+    [HideInInspector]
+    public Collider2D[] currentEnemiesInScene;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +26,15 @@ public class TurretShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
+       
+
+
+
+    }
+    private void FixedUpdate()
+    {
+        timer += Time.fixedDeltaTime;
+
         FindClosestEnemy();
         if (timer >= tower.reloadDelay)
         {
@@ -31,30 +42,30 @@ public class TurretShooting : MonoBehaviour
             timer = 0;
         }
 
-
-
     }
 
 
 
     private void FindClosestEnemy()
-    {
+    { 
         enemyToShoot = null;
-        EnemyResetAndParameters[] currentEnemiesInScene = GameObject.FindObjectsOfType<EnemyResetAndParameters>();
-        foreach (EnemyResetAndParameters enemyIndex in currentEnemiesInScene)
+       currentEnemiesInScene=(Physics2D.OverlapCircleAll(transform.position, tower.radius, tower.enemieLayer));
+       
+        foreach (Collider2D enemyIndex in currentEnemiesInScene)
         {
             float distance = (transform.position - enemyIndex.transform.position).sqrMagnitude;
-            if (smallestDistance > distance &&distance<=tower.radius)
-            {
-                smallestDistance = distance;
-                enemyToShoot = enemyIndex;
-                Debug.DrawLine(this.transform.position, enemyIndex.transform.position);
-            }
-            if (enemyToShoot == null | (this.gameObject.transform.position-enemyToShoot.transform.position).sqrMagnitude>tower.radius)
+           
+                if (smallestDistance > distance)
+                {
+                    smallestDistance = distance;
+                    enemyToShoot = enemyIndex;
+                    Debug.DrawLine(this.transform.position, enemyIndex.transform.position);
+                }
+            
+            if (enemyToShoot == null)
             {
                 smallestDistance = Mathf.Infinity;
             }
-            Debug.LogWarning(distance);
         }
 
     }
