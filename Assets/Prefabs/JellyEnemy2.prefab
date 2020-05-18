@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6661735017400270041}
   - component: {fileID: 1468977515908834259}
   - component: {fileID: 5866956889623505520}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9200012395900361756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5811113330888655534}
   - component: {fileID: 6467806982021781642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 2367796983183745916}
   - component: {fileID: 277810443880626395}
   - component: {fileID: 4690907272620159634}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: JellyEnemy2
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2367796983183745888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.16404161, y: -2.8162055, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 6504438566284225053}
@@ -369,8 +369,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  pathIndex: 0
-  waypointIndex: 0
   health: 0
   maxhealth: 100
   initialHealth: 0
@@ -400,7 +398,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d62ebc947bb7c440a5dbd0b65608b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemypath: {fileID: 0}
   pathIndex: 0
   waypointIndex: 0
 --- !u!1 &4375498180813113962
@@ -414,7 +411,7 @@ GameObject:
   - component: {fileID: 5670119667095369450}
   - component: {fileID: 5385261043713782208}
   - component: {fileID: 6862772372279476659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,6 +460,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -487,7 +485,7 @@ GameObject:
   - component: {fileID: 2403600984147817905}
   - component: {fileID: 3154454024390538202}
   - component: {fileID: 377025296084979437}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,6 +534,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -560,7 +559,7 @@ GameObject:
   - component: {fileID: 6263085301833527327}
   - component: {fileID: 5870094948025568811}
   - component: {fileID: 1255710973370393924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,6 +608,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -631,7 +631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1432049325481824754}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}

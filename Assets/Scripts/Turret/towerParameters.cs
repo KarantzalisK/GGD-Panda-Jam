@@ -6,8 +6,10 @@ public class towerParameters : MonoBehaviour
 {
     //public GameObject arrow;
     public int towerDMG;
-    public float reloadDelay,shootinSpeed,radius;
+    public float reloadDelay,shootinSpeed,radius,boltSpeed,boltdmg;
     public float turretRespawnDelay;
+    public GameObject boltPrefab;
+    public float boltLifeSpam;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,6 @@ public class towerParameters : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
  
    

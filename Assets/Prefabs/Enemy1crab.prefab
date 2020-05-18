@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5731847218286752068}
   - component: {fileID: 547885932530806350}
   - component: {fileID: 4797246379223984109}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7806324307565629825}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4854204026687934259}
   - component: {fileID: 5348838404347237655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 6085775457199374094}
   - component: {fileID: 8457928116144574027}
   - component: {fileID: 4566554692618485138}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy1crab
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3333294069174833615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.16404161, y: -2.08, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 5313342074448144256}
@@ -370,8 +370,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  pathIndex: 0
-  waypointIndex: 0
   health: 0
   maxhealth: 50
   initialHealth: 0
@@ -422,7 +420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d62ebc947bb7c440a5dbd0b65608b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemypath: {fileID: 0}
   pathIndex: 0
   waypointIndex: 0
 --- !u!1 &3404796597888698359
@@ -436,7 +433,7 @@ GameObject:
   - component: {fileID: 6721886143904381815}
   - component: {fileID: 6432523993980976221}
   - component: {fileID: 5532064122682985518}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,6 +482,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -507,7 +505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 10987801563110511}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +543,7 @@ GameObject:
   - component: {fileID: 3649022094140667948}
   - component: {fileID: 4052816516859559495}
   - component: {fileID: 1640390657067303792}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,6 +592,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -618,7 +617,7 @@ GameObject:
   - component: {fileID: 4977131766774463874}
   - component: {fileID: 4795881015967450038}
   - component: {fileID: 186211523904661721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,6 +666,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
