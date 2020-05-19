@@ -51,6 +51,11 @@ public class TurretCollisionControllerAndReset : MonoBehaviour
         {
             player.canShoot = false;
         }
+      
+
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
         if (collision.CompareTag("externalBorder"))
         {
             if (!player.carrying)
@@ -59,7 +64,6 @@ public class TurretCollisionControllerAndReset : MonoBehaviour
                 returnTurret = true;
             }
         }
-
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -68,7 +72,9 @@ public class TurretCollisionControllerAndReset : MonoBehaviour
 
             returnTurret = false;
         }
+       
     }
+   
 
     private IEnumerator TurretRecover()
     {
@@ -78,4 +84,5 @@ public class TurretCollisionControllerAndReset : MonoBehaviour
         yield return new WaitForSeconds(towerRespawnDelay);
         throwObj.shootingTurretAction(turretSpawningPosition);
     }
+    
 }

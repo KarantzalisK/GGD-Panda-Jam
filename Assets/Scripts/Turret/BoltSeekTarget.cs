@@ -23,7 +23,7 @@ public class BoltSeekTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForceAtPosition(targetToKill * tower.boltSpeed * Time.deltaTime, targetToKill);
+        rb.AddRelativeForce(targetToKill * tower.boltSpeed * Time.deltaTime);
 
     }
     private void OnTriggerEnter2D(Collider2D collision)

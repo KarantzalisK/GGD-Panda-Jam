@@ -36,7 +36,7 @@ public class TurretShooting : MonoBehaviour
         timer += Time.fixedDeltaTime;
 
         FindClosestEnemy();
-        if (timer >= tower.reloadDelay)
+        if (timer >= tower.reloadDelay&&enemyToShoot!=null)
         {
             shoot();
             timer = 0;
