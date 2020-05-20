@@ -24,6 +24,7 @@ public class BoltSeekTarget : MonoBehaviour
     void Update()
     {
         rb.AddRelativeForce(targetToKill * tower.boltSpeed * Time.deltaTime);
+        gameObject.transform.position = Vector2.MoveTowards(this.transform.position,targetToKill,tower.boltSpeed*Time.deltaTime);
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
