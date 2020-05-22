@@ -7,17 +7,22 @@ public class EnemyMovementWithWaypoints : MonoBehaviour
     private EnemyPaths enemyPathnWaypoints;
     [HideInInspector]
     public int pathIndex, waypointIndex;
-    private float speed;
+    private SpawnManager spawnMng;
+    private EnemyResetAndParameters enemyStats;
+    private GameObject spawnobj;
+    private Vector3 enemyObjectivePos;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        enemyPathnWaypoints = GameObject.FindGameObjectWithTag("spawnpoint").GetComponent<EnemyPaths>();
-        transform.position = enemyPathnWaypoints.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position;
-        speed = gameObject.GetComponent<EnemyResetAndParameters>().speed;
+        spawnobj = GameObject.FindGameObjectWithTag("spawnpoint");
+        enemyPathnWaypoints = spawnobj.GetComponent<EnemyPaths>();
+        enemyStats = gameObject.GetComponent<EnemyResetAndParameters>();
+        pathIndex = Random.Range(0, spawnobj.GetComponent<SpawnManager>().enemyPaths.Count);
         waypointIndex = 0;
-        pathIndex = Random.Range(0, 4);
+        transform.position = enemyPathnWaypoints.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position;
+
     }
 
     // Update is called once per frame
@@ -27,8 +32,9 @@ public class EnemyMovementWithWaypoints : MonoBehaviour
     }
     public void enemyMovement()
     {
-        this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, enemyPathnWaypoints.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position, Time.deltaTime * speed);
-        if (this.gameObject.transform.position == enemyPathnWaypoints.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position)
+        enemyObjectivePos = enemyPathnWaypoints.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position;
+        this.transform.position = Vector3.MoveTowards(this.transform.position, enemyObjectivePos, enemyStats.speed* Time.deltaTime);
+        if (this.gameObject.transform.position == enemyObjectivePos)
         {
             waypointIndex++;
         }
@@ -37,4 +43,5 @@ public class EnemyMovementWithWaypoints : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+ 
 }
