@@ -9,7 +9,6 @@ public class TurretCollisionControllerAndReset : MonoBehaviour
     [HideInInspector]
     public Vector2 turretSpawningPosition;
     private float towerRespawnDelay;
-    private float towerdamage;
     [HideInInspector]
     public bool returnTurret=false;
     private GameObject playerOBJ;
@@ -43,7 +42,7 @@ public class TurretCollisionControllerAndReset : MonoBehaviour
     {
         if (collision.CompareTag("enemy"))
         {
-            collision.gameObject.GetComponent<EnemyResetAndParameters>().health = collision.gameObject.GetComponent<EnemyResetAndParameters>().health + GetComponent<towerParameters>().towerDMG;
+            collision.GetComponent<EnemyResetAndParameters>().health +=  GetComponent<towerParameters>().towerDMG;
 
 
         }
@@ -78,8 +77,7 @@ public class TurretCollisionControllerAndReset : MonoBehaviour
 
     private IEnumerator TurretRecover()
     {
-        Vector2 objTransf;
-        objTransf = transform.position;
+        
         towerRespawnDelay = GetComponent<towerParameters>().turretRespawnDelay;
         yield return new WaitForSeconds(towerRespawnDelay);
         throwObj.shootingTurretAction(turretSpawningPosition);

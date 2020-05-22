@@ -5,11 +5,8 @@ using UnityEngine;
 public class PlayerthrowObj : MonoBehaviour
 {   //dependancyPlayerParameters and TurretCollisionController*
     // Start is called before the first frame update
-    private Transform newTurretPosition;
-    private Transform objTransf;
     private GameObject turret;
     private PlayerParameters player;
-    private float throwingSpeed;
     [HideInInspector]
     public Vector3 clickVector;
     
@@ -18,35 +15,34 @@ public class PlayerthrowObj : MonoBehaviour
     {
         player =this.gameObject.GetComponent<PlayerParameters>();
         turret = player.turretObj;
-        objTransf = turret.GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     { 
-        throwingSpeed = player.throwingSpeed;
-        Debug.Log(Input.mousePosition);
-
-    }
-    void FixedUpdate()
-    {
+        
         ShootinTurretsController();
 
     }
+
+
     public void ShootinTurretsController()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0)&& player.carrying&& player.holdingObject)
+    {   //canshoot is used in order to stop the MoveTowards at set Moments without waiting to reach the exact coordinates since that is verry time consuming and game breaking
+        if (Input.GetKeyDown(KeyCode.Mouse0)&&player.carrying)
         {
             clickVector = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             player.carrying = false;
             player.holdingObject = false;
             player.canShoot = true;
+           
         }
-        if (player.canShoot)
+       if (player.canShoot)
         {
-
             shootingTurretAction(clickVector);
         }
+          
+            
+        
 
 
 
@@ -54,6 +50,6 @@ public class PlayerthrowObj : MonoBehaviour
     }
     public void shootingTurretAction(Vector2 genreicVector)
     {   
-        turret.transform.position = Vector2.MoveTowards(turret.transform.position, genreicVector, throwingSpeed * Time.fixedDeltaTime);
+        turret.transform.position = Vector2.MoveTowards(turret.transform.position, genreicVector, player.throwingSpeed * Time.deltaTime);
     }
 }
