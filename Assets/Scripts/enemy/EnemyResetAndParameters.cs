@@ -32,14 +32,7 @@ public class EnemyResetAndParameters : MonoBehaviour
   
   
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-        if (collision.CompareTag("turret"))
-        {
-            health = health + collision.gameObject.GetComponentInParent<towerParameters>().towerDMG;
-        }
-    }
+   
 
 
 }
