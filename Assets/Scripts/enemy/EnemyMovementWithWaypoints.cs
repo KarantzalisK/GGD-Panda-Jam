@@ -19,7 +19,7 @@ public class EnemyMovementWithWaypoints : MonoBehaviour
         spawnobj = GameObject.FindGameObjectWithTag("spawnpoint");
         enemyPathnWaypoints = spawnobj.GetComponent<EnemyPaths>();
         enemyStats = gameObject.GetComponent<EnemyResetAndParameters>();
-        pathIndex = Random.Range(0, spawnobj.GetComponent<SpawnManager>().enemyPaths.Count);
+        pathIndex = Random.Range(0, spawnobj.GetComponent<SpawnManager>().enemyPaths.Count+1);
         waypointIndex = 0;
         transform.position = enemyPathnWaypoints.enemyPaths[pathIndex].waypoints[waypointIndex].transform.position;
 
