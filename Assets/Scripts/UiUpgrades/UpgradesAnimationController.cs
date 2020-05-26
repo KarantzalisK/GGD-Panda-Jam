@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class UpgradesController : MonoBehaviour
+public class UpgradesAnimationController : MonoBehaviour
 {
     private uIUpgradesAnimations animationControlls;
     // Start is called before the first frame update

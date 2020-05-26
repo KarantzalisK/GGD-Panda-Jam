@@ -6,7 +6,8 @@ public class coinCollectorScript : MonoBehaviour
 {
     public GameObject coinsGatheredTextobj;
     public int coinsToUpgrade=0,coinMultiplier;
-    private int coinsGathered = 0;
+    [HideInInspector]
+    public int coinsGathered = 0;
     public Transform objectATMaxEdge;
     // Start is called before the first frame update
     void Start()
