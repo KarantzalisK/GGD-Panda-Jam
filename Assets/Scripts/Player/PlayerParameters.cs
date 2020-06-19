@@ -17,6 +17,7 @@ public class PlayerParameters : MonoBehaviour
     public Transform newTurretPosition;
     [HideInInspector]
     public GameObject turretObj;
+    [HideInInspector]
     public Vector2 clickVector;
 
 
