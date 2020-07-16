@@ -15503,25 +15503,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &779077225 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2370501696465830110, guid: 48018d785d9b2e54890d1bd0669aad6e,
-    type: 3}
-  m_PrefabInstance: {fileID: 964321828}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &779077226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779077225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 009da970fbe94544fa9a7aae06874274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winingPanel: {fileID: 1840821358}
 --- !u!1 &787220274
 GameObject:
   m_ObjectHideFlags: 0
@@ -15637,7 +15618,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 964321828}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779077225}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16f0a07deb86fc64e90073fc4419124d, type: 3}
@@ -16085,6 +16066,11 @@ PrefabInstance:
       propertyPath: activeWave.Array.data[5]
       value: 
       objectReference: {fileID: 285089266}
+    - target: {fileID: 4270684068404739075, guid: 48018d785d9b2e54890d1bd0669aad6e,
+        type: 3}
+      propertyPath: winingPanel
+      value: 
+      objectReference: {fileID: 1840821358}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48018d785d9b2e54890d1bd0669aad6e, type: 3}
 --- !u!1 &981606974
