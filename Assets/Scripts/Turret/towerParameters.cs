@@ -11,6 +11,7 @@ public class towerParameters : MonoBehaviour
     public GameObject boltPrefab;
     public float boltLifeSpam;
     public LayerMask enemieLayer;
+    public float towerReturnDistanceOffset;
     // Start is called before the first frame update
     void Start()
     {

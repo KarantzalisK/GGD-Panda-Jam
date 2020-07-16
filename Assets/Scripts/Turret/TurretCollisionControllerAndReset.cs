@@ -53,28 +53,6 @@ public class TurretCollisionControllerAndReset : MonoBehaviour
       
 
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("externalBorder"))
-        {
-            if (!player.carrying)
-            {
-                player.canShoot = false;
-                returnTurret = true;
-            }
-        }
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("turretPlatform"))
-        {
-
-            returnTurret = false;
-        }
-       
-    }
-   
-
     private IEnumerator TurretRecover()
     {
         

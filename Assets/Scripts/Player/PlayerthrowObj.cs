@@ -31,6 +31,7 @@ public class PlayerthrowObj : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0)&&player.carrying)
         {
             clickVector = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            player.clickVector = clickVector;
             player.carrying = false;
             player.holdingObject = false;
             player.canShoot = true;

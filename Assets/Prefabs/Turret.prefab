@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2587551426636221823}
   - component: {fileID: 372870020289736162}
   - component: {fileID: 386656707196899621}
+  - component: {fileID: 5273417523376265770}
   m_Layer: 0
   m_Name: Turret
   m_TagString: turret
@@ -49,7 +50,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005889982, y: -0.035273552}
+  m_Offset: {x: -0.023418605, y: -0.18747807}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -60,7 +61,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6043137, y: 0.69630325}
+  m_Size: {x: 0.66293085, y: 1.0007124}
   m_EdgeRadius: 0
 --- !u!212 &372870020289736190
 SpriteRenderer:
@@ -162,16 +163,17 @@ MonoBehaviour:
   towerDMG: 30
   reloadDelay: 0.5
   shootinSpeed: 4
-  radius: 1.5
+  radius: 2
   boltSpeed: 6
   boltdmg: 10
   turretRespawnDelay: 5
   boltPrefab: {fileID: 5586784112083079378, guid: 15b4b8699f460e64ca944ec2735c723d,
     type: 3}
-  boltLifeSpam: 1
+  boltLifeSpam: 2
   enemieLayer:
     serializedVersion: 2
     m_Bits: 256
+  towerReturnDistanceOffset: 10
 --- !u!114 &386656707196899621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,3 +188,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretSpawningPosition: {x: 0, y: 0}
   returnTurret: 0
+--- !u!114 &5273417523376265770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372870020289736189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baeb03e4d3d603048ac509ab6b78b34f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

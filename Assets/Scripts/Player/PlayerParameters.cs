@@ -37,7 +37,6 @@ public class PlayerParameters : MonoBehaviour
     void Update()
     {
         movement = GetComponent<PlayerMovement>().movement;
-        clickVector = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
     }
 
