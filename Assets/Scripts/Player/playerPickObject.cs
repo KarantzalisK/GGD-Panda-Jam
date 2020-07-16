@@ -29,7 +29,7 @@ public class playerPickObject : MonoBehaviour
     }
     private void PickUpObj()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl) && player.canCarry)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && player.canCarry)
         {
            player.carrying = true;
             player.holdingObject = true;
@@ -37,7 +37,7 @@ public class playerPickObject : MonoBehaviour
 
 
         }
-        if (Input.GetKeyUp(KeyCode.LeftControl))
+        if (Input.GetKeyUp(KeyCode.LeftShift))
         {
 
             player.carrying = false;

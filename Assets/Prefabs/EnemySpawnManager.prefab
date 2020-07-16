@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2370501696465830108}
   - component: {fileID: 2370501696465830111}
   - component: {fileID: 2370501696465830109}
+  - component: {fileID: 4270684068404739075}
   m_Layer: 0
   m_Name: EnemySpawnManager
   m_TagString: spawnpoint
@@ -47,17 +48,14 @@ MonoBehaviour:
   enemyPaths:
   - {fileID: 0}
   - {fileID: 0}
-  Waves:
-  - {fileID: 11400000, guid: 6821b3e5527a48843a526d4f420ce7bf, type: 2}
+  activeWave: []
   timeCounter: 0
   instanciateDelay: 2
-  waveDelay: 5
   canSpawn: 1
   i: 0
   amountOfEnemies: 10
-  enemyIndexer: 0
   waveNumber: 0
-  extraEnemies: 5
+  amountOfEasiestEnemy: 0
   enemyPrefabs:
   - {fileID: 3333294069174833615, guid: a059990ffa9a51045a081bf4e11d982f, type: 3}
   - {fileID: 2367796983183745888, guid: ec130c299bee3134da50960b82212002, type: 3}
@@ -86,3 +84,16 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+--- !u!114 &4270684068404739075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2370501696465830110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 009da970fbe94544fa9a7aae06874274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winingPanel: {fileID: 0}
