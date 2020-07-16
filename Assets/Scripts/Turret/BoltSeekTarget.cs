@@ -8,6 +8,7 @@ public class BoltSeekTarget : MonoBehaviour
     private TurretShooting turretShooting;
     private Vector3 targetToKill;
     private Transform boltTransf;
+    private float boltLifeSpam,boltdmg;
     // Start is called before the first frame update
     //placed at bolt preab
     void Start()
@@ -16,20 +17,28 @@ public class BoltSeekTarget : MonoBehaviour
         turretShooting = tower.GetComponent<TurretShooting>();
         targetToKill = turretShooting.enemyToShoot.gameObject.transform.position;
         boltTransf = this.transform;
+        boltLifeSpam = tower.boltLifeSpam;
+        StartCoroutine(waitToDestroy());
+        boltdmg = tower.boltdmg;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         boltTransf.position = Vector2.MoveTowards(boltTransf.position,targetToKill,tower.boltSpeed*Time.deltaTime);
+        //if (targetToKill == null)
+        //{
+        //    Destroy(this.gameObject);
+        //}
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {   
-        StartCoroutine(waitToDestroy());
         if (collision.CompareTag("enemy"))
         {
-           collision.GetComponent<EnemyResetAndParameters>().health +=tower.boltdmg;
+           collision.GetComponent<EnemyResetAndParameters>().health += boltdmg;
+            Destroy(this.gameObject);
         }
         
         
@@ -37,7 +46,7 @@ public class BoltSeekTarget : MonoBehaviour
     }
     IEnumerator waitToDestroy()
     {
-        yield return new WaitForSeconds(tower.boltLifeSpam);
+        yield return new WaitForSeconds(boltLifeSpam);
         Destroy(this.gameObject);
     }
 

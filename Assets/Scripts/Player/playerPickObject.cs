@@ -33,7 +33,7 @@ public class playerPickObject : MonoBehaviour
         {
            player.carrying = true;
             player.holdingObject = true;
-
+            turret.GetComponent<TurretCollisionControllerAndReset>().returnTurret = false;
 
 
         }
